@@ -5,7 +5,8 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = "super_secret_key" # strictly for flash messages and dev
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATABASE = os.path.join(BASE_DIR, "database.db")
 DATABASE = "database.db"
 
 def get_db_connection():
